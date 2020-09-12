@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EncryptationDavidRivas.DAL.ViewModel
+namespace EncryptationDavidRivas.BL.ViewModel
 {
     /// <summary>
     /// This class is the mapping to the data model in the Data Access Layer

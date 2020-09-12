@@ -1,5 +1,5 @@
-﻿using EncryptationDavidRivas.DAL.Repositories;
-using EncryptationDavidRivas.DAL.ViewModel;
+﻿using EncryptationDavidRivas.BL.ViewModel;
+using EncryptationDavidRivas.DAL.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,7 @@ namespace EncryptationDavidRivas.BL.Services
 
         void Insert();
         IEnumerable<UserViewModel> GetAll();
-        UserViewModel GetByUserNameAndPassword(string username, string password);
+        DecryptionViewModel GetByUserNameAndPassword(string username, string password);
     }
 
     public class UserService : IUserService
@@ -47,38 +47,66 @@ namespace EncryptationDavidRivas.BL.Services
             });
         }
 
-        public UserViewModel GetByUserNameAndPassword(string username, string password)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public DecryptionViewModel GetByUserNameAndPassword(string username, string password)
         {
-            string decrypted;
+            var returnValue = new DecryptionViewModel();
+
+            string encryptedUserNameString = string.Empty,
+                encryptedPasswordString = string.Empty;
 
             // AES
             using (var aes = new AesManaged())
             {
                 // Encrypt string    
-                byte[] encrypted = _encryptionService.SymmetricEncrypt(username, aes.Key, aes.IV);
+                byte[] encryptedUserName = _encryptionService.SymmetricEncrypt(username, aes.Key, aes.IV);
                 // Print encrypted string    
-                string encryptedString = Encoding.UTF8.GetString(encrypted);
+                encryptedUserNameString = Encoding.UTF8.GetString(encryptedUserName);
                 // Decrypt the bytes to a string.    
-                decrypted = _decryptionService.SymmetricDecrypt(encrypted, aes.Key, aes.IV);
+                returnValue.DecriptedUserName = _decryptionService.SymmetricDecrypt(encryptedUserName, aes.Key, aes.IV);
             }
 
-            return null;
+            // RSA
+
+            var userFromDb = _userRepository.GetByUserNameAndPassword(encryptedUserNameString, encryptedPasswordString);
+
+            if (userFromDb == null)
+                throw new NullReferenceException("User does not exists");
+
+            returnValue.User = new UserViewModel
+            {
+                Id = userFromDb.Id,
+                Name = userFromDb.Name,
+                LastName = userFromDb.LastName,
+                UserName = userFromDb.UserName,
+                Password = userFromDb.Password
+            };
+
+            return returnValue;
         }
 
         public void Insert()
         {
-
-
             // AES
             using (var aes = new AesManaged())
             {
                 // Encrypt string    
                 byte[] encrypted = _encryptionService.SymmetricEncrypt(User.UserName, aes.Key, aes.IV);
-                // Print encrypted string    
+                // Get encrypted string    
                 string encryptedString = Encoding.UTF8.GetString(encrypted);
                 // Decrypt the bytes to a string.    
-                string decrypted = _decryptionService.SymmetricDecrypt(encrypted, aes.Key, aes.IV);
+                //string decrypted = _decryptionService.SymmetricDecrypt(encrypted, aes.Key, aes.IV);
             }
+
+            // RSA
+
+            // restart User
+            User = new UserViewModel();
         }
     }
 }

@@ -58,6 +58,7 @@
     <Compile Include="Services\DecryptionService.cs" />
     <Compile Include="Services\EncryptionService.cs" />
     <Compile Include="Services\UserService.cs" />
+    <Compile Include="ViewModel\DecryptionViewModel.cs" />
     <Compile Include="ViewModel\UserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
