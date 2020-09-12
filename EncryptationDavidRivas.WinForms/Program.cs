@@ -1,10 +1,15 @@
-﻿using System;
+﻿using EncryptationDavidRivas.BL.Bootstrap;
+using EncryptationDavidRivas.BL.Services;
+using SimpleInjector;
+using System;
 using System.Windows.Forms;
 
 namespace EncryptationDavidRivas.WinForms
 {
     static class Program
     {
+        public static Container Container { get; private set; }
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -13,7 +18,24 @@ namespace EncryptationDavidRivas.WinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Start());
+            Boostrap();
+            Application.Run(Container.GetInstance<Start>());
+        }
+
+        /// <summary>
+        /// Taken from https://simpleinjector.readthedocs.io/en/latest/windowsformsintegration.html
+        /// </summary>
+        static void Boostrap()
+        {
+            // Create the container as usual.
+            Container = new Container();
+
+            // Register types
+            Container.Register<Start>(Lifestyle.Singleton);
+            Bootstrapper.Bootstrapp(Container);
+
+            // Optionally verify the container.
+            Container.Verify();
         }
     }
 }

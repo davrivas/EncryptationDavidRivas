@@ -1,15 +1,16 @@
-﻿using System;
-using System.Security.Cryptography;
-using System.Text;
+﻿using EncryptationDavidRivas.BL.Services;
 using System.Windows.Forms;
 
 namespace EncryptationDavidRivas.WinForms
 {
     public partial class Start : Form
     {
-        public Start()
+        private readonly IUserService _userService;
+
+        public Start(IUserService userService)
         {
             InitializeComponent();
+            _userService = userService;
             //AES();
         }
 

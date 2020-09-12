@@ -8,7 +8,13 @@ namespace EncryptationDavidRivas.BL.Services
     /// </summary>
     public interface IDecryptionService
     {
-        string Decrypt(byte[] cipherText, byte[] Key, byte[] IV);
+        /// <summary>
+        /// AES decryption
+        /// </summary>
+        /// <param name="cipherText">Bytes to decrypt</param>
+        /// <param name="Key">AES key</param>
+        /// <param name="IV">AES initialization vector</param>
+        string SymmetricDecrypt(byte[] cipherText, byte[] Key, byte[] IV);
     }
 
     /// <summary>
@@ -16,23 +22,32 @@ namespace EncryptationDavidRivas.BL.Services
     /// </summary>
     public class DecryptionService : IDecryptionService
     {
-        public string Decrypt(byte[] cipherText, byte[] Key, byte[] IV)
+        /// <summary>
+        /// AES decryption
+        /// </summary>
+        /// <param name="cipherText">Bytes to decrypt</param>
+        /// <param name="Key">AES key</param>
+        /// <param name="IV">AES initialization vector</param>
+        /// <returns></returns>
+        public string SymmetricDecrypt(byte[] cipherText, byte[] Key, byte[] IV)
         {
             string plaintext = null;
             // Create AesManaged    
-            using (AesManaged aes = new AesManaged())
+            using (var aes = new AesManaged())
             {
                 // Create a decryptor    
                 ICryptoTransform decryptor = aes.CreateDecryptor(Key, IV);
                 // Create the streams used for decryption.    
-                using (MemoryStream ms = new MemoryStream(cipherText))
+                using (var ms = new MemoryStream(cipherText))
                 {
                     // Create crypto stream    
                     using (CryptoStream cs = new CryptoStream(ms, decryptor, CryptoStreamMode.Read))
                     {
                         // Read crypto stream    
-                        using (StreamReader reader = new StreamReader(cs))
+                        using (var reader = new StreamReader(cs))
+                        {
                             plaintext = reader.ReadToEnd();
+                        }
                     }
                 }
             }

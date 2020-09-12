@@ -13,6 +13,16 @@ namespace EncryptationDavidRivas.BL.Services
 
     public class UserService : IUserService
     {
+        private readonly IEncryptionService _encryptionService;
+        private readonly IDecryptionService _decryptionService;
+
+        public UserService(IEncryptionService encryptionService,
+            IDecryptionService decryptionService)
+        {
+            _encryptionService = encryptionService;
+            _decryptionService = decryptionService;
+        }
+
         public IEnumerable<UserViewModel> GetAll()
         {
             throw new NotImplementedException();
