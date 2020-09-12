@@ -11,7 +11,7 @@ namespace EncryptationDavidRivas.WinForms
         {
             InitializeComponent();
             _userService = userService;
-            //AES();
+            _userService.GetByUserNameAndPassword("davr", "2112");
         }
 
         //private void AES()
@@ -21,21 +21,7 @@ namespace EncryptationDavidRivas.WinForms
         //        string raw = Guid.NewGuid().ToString();
         //        // Create Aes that generates a new key and initialization vector (IV).    
         //        // Same key must be used in encryption and decryption    
-        //        using (AesManaged aes = new AesManaged())
-        //        {
-        //            // Encrypt string    
-        //            byte[] encrypted = Encrypt(raw, aes.Key, aes.IV);
-        //            // Print encrypted string    
-        //            string encryptedString = Encoding.UTF8.GetString(encrypted);
-        //            // Decrypt the bytes to a string.    
-        //            string decrypted = Decrypt(encrypted, aes.Key, aes.IV);
-
-        //            MessageBox.Show($"::AES::\n" +
-        //                $"Text : {raw}\n" +
-        //                $"Encrypted : {encryptedString}\n" +
-        //                $"Decrypted : {decrypted}\n" +
-        //                $"{raw == decrypted}");
-        //        }
+        
         //    }
         //    catch (Exception exp)
         //    {

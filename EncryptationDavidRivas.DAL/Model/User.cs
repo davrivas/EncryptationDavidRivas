@@ -3,14 +3,14 @@
 namespace EncryptationDavidRivas.BL.Model
 {
     /// <summary>
-    /// This class is the mapping to the data inside the application
+    /// This class is the mapping to the data in the sqlite database
     /// </summary>
     public class User
     {
         /// <summary>
         /// User Generated Unique Identifier
         /// </summary>
-        public Guid Id { get; internal set; }
+        public Guid Id { get; set; }
         /// <summary>
         /// User username (this should be unique)
         /// </summary>
@@ -28,6 +28,9 @@ namespace EncryptationDavidRivas.BL.Model
         /// </summary>
         public string Password { get; set; }
 
+        /// <summary>
+        /// Initializes the mapping to the data model in the sqlite database
+        /// </summary>
         public User()
         {
             Id = Guid.NewGuid();

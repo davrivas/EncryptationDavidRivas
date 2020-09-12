@@ -10,7 +10,7 @@ namespace EncryptationDavidRivas.DAL.ViewModel
         /// <summary>
         /// User Generated Unique Identifier
         /// </summary>
-        public Guid Id { get; internal set; }
+        public Guid Id { get; set; }
         /// <summary>
         /// User username (this should be unique)
         /// </summary>
@@ -28,6 +28,9 @@ namespace EncryptationDavidRivas.DAL.ViewModel
         /// </summary>
         public string Password { get; set; }
 
+        /// <summary>
+        /// Initializes the mapping to the data model in the Data Access Layer
+        /// </summary>
         public UserViewModel()
         {
             Id = Guid.NewGuid();
