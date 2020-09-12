@@ -58,8 +58,8 @@
     <Compile Include="Services\DecryptionService.cs" />
     <Compile Include="Services\EncryptionService.cs" />
     <Compile Include="Services\UserService.cs" />
-    <Compile Include="ViewModel\DecryptionViewModel.cs" />
-    <Compile Include="ViewModel\UserViewModel.cs" />
+    <Compile Include="Model\DecryptionModel.cs" />
+    <Compile Include="Model\UserModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EncryptationDavidRivas.DAL\EncryptationDavidRivas.DAL.csproj">

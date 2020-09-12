@@ -6,7 +6,7 @@ namespace EncryptationDavidRivas.DAL.Repositories
 {
     public interface IUserRepository
     {
-        void Insert();
+        void Insert(User user);
         IEnumerable<User> GetAll();
         User GetByUserNameAndPassword(string username, string password);
     }
@@ -23,7 +23,7 @@ namespace EncryptationDavidRivas.DAL.Repositories
             throw new NotImplementedException();
         }
 
-        public void Insert()
+        public void Insert(User user)
         {
             throw new NotImplementedException();
         }

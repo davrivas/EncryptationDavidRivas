@@ -3,34 +3,18 @@ using System.Security.Cryptography;
 
 namespace EncryptationDavidRivas.BL.Services
 {
-    /// <summary>
-    /// Taken from https://www.c-sharpcorner.com/article/aes-encryption-in-c-sharp/
-    /// </summary>
     public interface IEncryptionService
     {
-        /// <summary>
-        /// AES symmetryc encryption
-        /// </summary>
-        /// <param name="plainText">Text to encrypt</param>
-        /// <param name="Key">AES key</param>
-        /// <param name="IV">AES initialization vector</param>
-        byte[] SymmetricEncrypt(string plainText, byte[] Key, byte[] IV);
-        
+        byte[] SymmetricEncryption(string plainText, byte[] Key, byte[] IV);
+        byte[] AsymmetricEncryption(byte[] Data, RSAParameters RSAKey, bool DoOAEPPadding);
+
+
     }
 
-    /// <summary>
-    /// Taken from https://www.c-sharpcorner.com/article/aes-encryption-in-c-sharp/
-    /// </summary>
+    /// Taken from https://www.c-sharpcorner.com/article/aes-encryption-in-c-sharp/ and https://www.c-sharpcorner.com/UploadFile/75a48f/rsa-algorithm-with-C-Sharp2/
     public class EncryptionService: IEncryptionService
     {
-        /// <summary>
-        /// AES symmetryc encryption
-        /// </summary>
-        /// <param name="plainText">Text to encrypt</param>
-        /// <param name="Key">AES key</param>
-        /// <param name="IV">AES initialization vector</param>
-        /// <returns></returns>
-        public byte[] SymmetricEncrypt(string plainText, byte[] Key, byte[] IV)
+        public byte[] SymmetricEncryption(string plainText, byte[] Key, byte[] IV)
         {
             byte[] encrypted;
             // Create a new AesManaged.    
@@ -56,6 +40,17 @@ namespace EncryptationDavidRivas.BL.Services
             // Return encrypted data    
             //Encoding.UTF8.GetString(encrypted); to convert to string
             return encrypted;
+        }
+
+        public byte[] AsymmetricEncryption(byte[] Data, RSAParameters RSAKey, bool DoOAEPPadding)
+        {
+            byte[] encryptedData;
+            using (var RSA = new RSACryptoServiceProvider())
+            {
+                RSA.ImportParameters(RSAKey);
+                encryptedData = RSA.Encrypt(Data, DoOAEPPadding);
+            }
+            return encryptedData;
         }
     }
 }

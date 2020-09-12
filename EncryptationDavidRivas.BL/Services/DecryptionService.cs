@@ -3,32 +3,15 @@ using System.Security.Cryptography;
 
 namespace EncryptationDavidRivas.BL.Services
 {
-    /// <summary>
-    /// Taken from https://www.c-sharpcorner.com/article/aes-encryption-in-c-sharp/
-    /// </summary>
     public interface IDecryptionService
     {
-        /// <summary>
-        /// AES decryption
-        /// </summary>
-        /// <param name="cipherText">Bytes to decrypt</param>
-        /// <param name="Key">AES key</param>
-        /// <param name="IV">AES initialization vector</param>
-        string SymmetricDecrypt(byte[] cipherText, byte[] Key, byte[] IV);
+        string SymmetricDecrypt(byte[] cipherText, byte[] Key, byte[] IV);    
+        byte[] AsymmetricDecryption(byte[] Data, RSAParameters RSAKey, bool DoOAEPPadding);
     }
 
-    /// <summary>
-    /// Taken from https://www.c-sharpcorner.com/article/aes-encryption-in-c-sharp/
-    /// </summary>
+    /// Taken from https://www.c-sharpcorner.com/article/aes-encryption-in-c-sharp/ and https://www.c-sharpcorner.com/UploadFile/75a48f/rsa-algorithm-with-C-Sharp2/
     public class DecryptionService : IDecryptionService
     {
-        /// <summary>
-        /// AES decryption
-        /// </summary>
-        /// <param name="cipherText">Bytes to decrypt</param>
-        /// <param name="Key">AES key</param>
-        /// <param name="IV">AES initialization vector</param>
-        /// <returns></returns>
         public string SymmetricDecrypt(byte[] cipherText, byte[] Key, byte[] IV)
         {
             string plaintext = null;
@@ -52,6 +35,17 @@ namespace EncryptationDavidRivas.BL.Services
                 }
             }
             return plaintext;
+        }
+
+        public byte[] AsymmetricDecryption(byte[] Data, RSAParameters RSAKey, bool DoOAEPPadding)
+        {
+            byte[] decryptedData;
+            using (var RSA = new RSACryptoServiceProvider())
+            {
+                RSA.ImportParameters(RSAKey);
+                decryptedData = RSA.Decrypt(Data, DoOAEPPadding);
+            }
+            return decryptedData;
         }
     }
 }

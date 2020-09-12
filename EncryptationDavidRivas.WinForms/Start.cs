@@ -1,4 +1,5 @@
-﻿using EncryptationDavidRivas.BL.Services;
+﻿using EncryptationDavidRivas.BL.Model;
+using EncryptationDavidRivas.BL.Services;
 using System.Windows.Forms;
 
 namespace EncryptationDavidRivas.WinForms
@@ -11,7 +12,9 @@ namespace EncryptationDavidRivas.WinForms
         {
             InitializeComponent();
             _userService = userService;
-            _userService.GetByUserNameAndPassword("davr", "2112");
+            //_userService.GetByUserNameAndPassword("davr", "2112");
+            _userService.NewUser = new UserModel("davr", "David", "Rivas", "2112");
+            _userService.Insert();
         }
     }
 }
