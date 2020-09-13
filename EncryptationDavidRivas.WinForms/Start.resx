@@ -222,11 +222,64 @@
   <data name="pnlMain.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 244</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>307, 60</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>David Santiago Rivas Agudelo
+Criptografía Grupo 042
+Docente: Luis Francisco López Urrea</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="picAreandina.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 244</value>
+  </data>
+  <data name="picAreandina.Size" type="System.Drawing.Size, System.Drawing">
+    <value>318, 108</value>
+  </data>
+  <data name="picAreandina.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;picAreandina.Name" xml:space="preserve">
+    <value>picAreandina</value>
+  </data>
+  <data name="&gt;&gt;picAreandina.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picAreandina.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;picAreandina.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="txtRSA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
-  </data>
-  <data name="txtRSA.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="txtRSA.Location" type="System.Drawing.Point, System.Drawing">
     <value>67, 124</value>
@@ -250,13 +303,10 @@
     <value>pnlMain</value>
   </data>
   <data name="&gt;&gt;txtRSA.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="txtAES.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
-  </data>
-  <data name="txtAES.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="txtAES.Location" type="System.Drawing.Point, System.Drawing">
     <value>67, 4</value>
@@ -280,7 +330,7 @@
     <value>pnlMain</value>
   </data>
   <data name="&gt;&gt;txtAES.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="lblRSA.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -313,7 +363,7 @@
     <value>pnlMain</value>
   </data>
   <data name="&gt;&gt;lblRSA.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="lblAES.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -343,13 +393,13 @@
     <value>pnlMain</value>
   </data>
   <data name="&gt;&gt;lblAES.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="pnlMain.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 40</value>
   </data>
   <data name="pnlMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>705, 426</value>
+    <value>705, 363</value>
   </data>
   <data name="pnlMain.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -397,7 +447,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>733, 478</value>
+    <value>733, 415</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

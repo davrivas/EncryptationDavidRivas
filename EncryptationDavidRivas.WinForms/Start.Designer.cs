@@ -39,7 +39,10 @@
             this.btnEncrypt = new System.Windows.Forms.Button();
             this.txtAES = new System.Windows.Forms.TextBox();
             this.txtRSA = new System.Windows.Forms.TextBox();
+            this.picAreandina = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAreandina)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUserName
@@ -66,6 +69,8 @@
             // 
             resources.ApplyResources(this.pnlMain, "pnlMain");
             this.pnlMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMain.Controls.Add(this.label1);
+            this.pnlMain.Controls.Add(this.picAreandina);
             this.pnlMain.Controls.Add(this.txtRSA);
             this.pnlMain.Controls.Add(this.txtAES);
             this.pnlMain.Controls.Add(this.lblRSA);
@@ -99,6 +104,18 @@
             resources.ApplyResources(this.txtRSA, "txtRSA");
             this.txtRSA.Name = "txtRSA";
             // 
+            // picAreandina
+            // 
+            this.picAreandina.Image = global::EncryptationDavidRivas.WinForms.Properties.Resources.logo_areandina;
+            resources.ApplyResources(this.picAreandina, "picAreandina");
+            this.picAreandina.Name = "picAreandina";
+            this.picAreandina.TabStop = false;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
             // Start
             // 
             resources.ApplyResources(this, "$this");
@@ -113,6 +130,7 @@
             this.Name = "Start";
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAreandina)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,6 +148,8 @@
         private System.Windows.Forms.Label lblAES;
         private System.Windows.Forms.TextBox txtRSA;
         private System.Windows.Forms.TextBox txtAES;
+        private System.Windows.Forms.PictureBox picAreandina;
+        private System.Windows.Forms.Label label1;
     }
 }
 
