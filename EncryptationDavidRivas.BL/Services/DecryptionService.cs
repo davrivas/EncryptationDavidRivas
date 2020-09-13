@@ -5,14 +5,14 @@ namespace EncryptationDavidRivas.BL.Services
 {
     public interface IDecryptionService
     {
-        string SymmetricDecrypt(byte[] cipherText, byte[] Key, byte[] IV);    
+        string SymmetricDecryption(byte[] cipherText, byte[] Key, byte[] IV);    
         byte[] AsymmetricDecryption(byte[] Data, RSAParameters RSAKey, bool DoOAEPPadding);
     }
 
     /// Taken from https://www.c-sharpcorner.com/article/aes-encryption-in-c-sharp/ and https://www.c-sharpcorner.com/UploadFile/75a48f/rsa-algorithm-with-C-Sharp2/
     public class DecryptionService : IDecryptionService
     {
-        public string SymmetricDecrypt(byte[] cipherText, byte[] Key, byte[] IV)
+        public string SymmetricDecryption(byte[] cipherText, byte[] Key, byte[] IV)
         {
             string plaintext = null;
             // Create AesManaged    

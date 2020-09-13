@@ -29,58 +29,107 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
-            this.tabStart = new System.Windows.Forms.TabControl();
-            this.tabLogin = new System.Windows.Forms.TabPage();
-            this.Register = new System.Windows.Forms.TabPage();
-            this.tabUsers = new System.Windows.Forms.TabPage();
-            this.tabStart.SuspendLayout();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.pnlMain = new System.Windows.Forms.Panel();
+            this.lblRSA = new System.Windows.Forms.Label();
+            this.lblAES = new System.Windows.Forms.Label();
+            this.btnEncrypt = new System.Windows.Forms.Button();
+            this.txtAES = new System.Windows.Forms.TextBox();
+            this.txtRSA = new System.Windows.Forms.TextBox();
+            this.pnlMain.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabStart
+            // lblUserName
             // 
-            resources.ApplyResources(this.tabStart, "tabStart");
-            this.tabStart.Controls.Add(this.tabLogin);
-            this.tabStart.Controls.Add(this.Register);
-            this.tabStart.Controls.Add(this.tabUsers);
-            this.tabStart.Name = "tabStart";
-            this.tabStart.SelectedIndex = 0;
+            resources.ApplyResources(this.lblUserName, "lblUserName");
+            this.lblUserName.Name = "lblUserName";
             // 
-            // tabLogin
+            // txtUserName
             // 
-            resources.ApplyResources(this.tabLogin, "tabLogin");
-            this.tabLogin.Name = "tabLogin";
-            this.tabLogin.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.txtUserName, "txtUserName");
+            this.txtUserName.Name = "txtUserName";
             // 
-            // Register
+            // lblPassword
             // 
-            resources.ApplyResources(this.Register, "Register");
-            this.Register.Name = "Register";
-            this.Register.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.lblPassword, "lblPassword");
+            this.lblPassword.Name = "lblPassword";
             // 
-            // tabUsers
+            // txtPassword
             // 
-            resources.ApplyResources(this.tabUsers, "tabUsers");
-            this.tabUsers.Name = "tabUsers";
-            this.tabUsers.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.txtPassword, "txtPassword");
+            this.txtPassword.Name = "txtPassword";
+            // 
+            // pnlMain
+            // 
+            resources.ApplyResources(this.pnlMain, "pnlMain");
+            this.pnlMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMain.Controls.Add(this.txtRSA);
+            this.pnlMain.Controls.Add(this.txtAES);
+            this.pnlMain.Controls.Add(this.lblRSA);
+            this.pnlMain.Controls.Add(this.lblAES);
+            this.pnlMain.Name = "pnlMain";
+            // 
+            // lblRSA
+            // 
+            resources.ApplyResources(this.lblRSA, "lblRSA");
+            this.lblRSA.Name = "lblRSA";
+            // 
+            // lblAES
+            // 
+            resources.ApplyResources(this.lblAES, "lblAES");
+            this.lblAES.Name = "lblAES";
+            // 
+            // btnEncrypt
+            // 
+            resources.ApplyResources(this.btnEncrypt, "btnEncrypt");
+            this.btnEncrypt.Name = "btnEncrypt";
+            this.btnEncrypt.UseVisualStyleBackColor = true;
+            this.btnEncrypt.Click += new System.EventHandler(this.BtnEncrypt_Click);
+            // 
+            // txtAES
+            // 
+            resources.ApplyResources(this.txtAES, "txtAES");
+            this.txtAES.Name = "txtAES";
+            // 
+            // txtRSA
+            // 
+            resources.ApplyResources(this.txtRSA, "txtRSA");
+            this.txtRSA.Name = "txtRSA";
             // 
             // Start
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.tabStart);
+            this.Controls.Add(this.btnEncrypt);
+            this.Controls.Add(this.pnlMain);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.txtUserName);
+            this.Controls.Add(this.lblUserName);
             this.MaximizeBox = false;
             this.Name = "Start";
-            this.tabStart.ResumeLayout(false);
+            this.pnlMain.ResumeLayout(false);
+            this.pnlMain.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabStart;
-        private System.Windows.Forms.TabPage tabLogin;
-        private System.Windows.Forms.TabPage Register;
-        private System.Windows.Forms.TabPage tabUsers;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Panel pnlMain;
+        private System.Windows.Forms.Button btnEncrypt;
+        private System.Windows.Forms.Label lblRSA;
+        private System.Windows.Forms.Label lblAES;
+        private System.Windows.Forms.TextBox txtRSA;
+        private System.Windows.Forms.TextBox txtAES;
     }
 }
 

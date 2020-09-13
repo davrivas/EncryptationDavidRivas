@@ -7,8 +7,6 @@ namespace EncryptationDavidRivas.BL.Services
     {
         byte[] SymmetricEncryption(string plainText, byte[] Key, byte[] IV);
         byte[] AsymmetricEncryption(byte[] Data, RSAParameters RSAKey, bool DoOAEPPadding);
-
-
     }
 
     /// Taken from https://www.c-sharpcorner.com/article/aes-encryption-in-c-sharp/ and https://www.c-sharpcorner.com/UploadFile/75a48f/rsa-algorithm-with-C-Sharp2/
@@ -37,8 +35,8 @@ namespace EncryptationDavidRivas.BL.Services
                     }
                 }
             }
-            // Return encrypted data    
-            //Encoding.UTF8.GetString(encrypted); to convert to string
+
+            // Return encrypted data
             return encrypted;
         }
 

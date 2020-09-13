@@ -7,10 +7,9 @@ namespace EncryptationDavidRivas.BL.Bootstrap
     {
         public static void Bootstrapp(Container container)
         {
-            container.Register<IUserService, UserService>(Lifestyle.Singleton);
+            container.Register<IEncryptionDecryptionService, EncryptionDecryptionService>(Lifestyle.Singleton);
             container.Register<IEncryptionService, EncryptionService>(Lifestyle.Singleton);
             container.Register<IDecryptionService, DecryptionService>(Lifestyle.Singleton);
-            DAL.Bootstrap.Bootstrapper.Bootstrapp(container);
         }
     }
 }

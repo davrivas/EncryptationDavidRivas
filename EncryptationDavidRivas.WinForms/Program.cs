@@ -1,5 +1,4 @@
 ﻿using EncryptationDavidRivas.BL.Bootstrap;
-using EncryptationDavidRivas.BL.Services;
 using SimpleInjector;
 using System;
 using System.Windows.Forms;
@@ -34,7 +33,7 @@ namespace EncryptationDavidRivas.WinForms
             Container.Register<Start>(Lifestyle.Singleton);
             Bootstrapper.Bootstrapp(Container);
 
-            // Optionally verify the container.
+            // Verify the container.
             Container.Verify();
         }
     }

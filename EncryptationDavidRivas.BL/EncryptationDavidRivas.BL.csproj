@@ -57,15 +57,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DecryptionService.cs" />
     <Compile Include="Services\EncryptionService.cs" />
-    <Compile Include="Services\UserService.cs" />
-    <Compile Include="Model\DecryptionModel.cs" />
-    <Compile Include="Model\UserModel.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EncryptationDavidRivas.DAL\EncryptationDavidRivas.DAL.csproj">
-      <Project>{7def76db-6829-4e47-ae13-c23b733f38f8}</Project>
-      <Name>EncryptationDavidRivas.DAL</Name>
-    </ProjectReference>
+    <Compile Include="Services\EncryptionDecryptionService.cs" />
+    <Compile Include="Model\EncryptionDecryptionModel.cs" />
+    <Compile Include="Util\DateTimeUtils.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

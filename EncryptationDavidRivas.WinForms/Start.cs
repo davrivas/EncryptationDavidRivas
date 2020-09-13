@@ -1,25 +1,55 @@
-﻿using EncryptationDavidRivas.BL.Model;
-using EncryptationDavidRivas.BL.Services;
-using System.Linq;
+﻿using EncryptationDavidRivas.BL.Services;
+using EncryptationDavidRivas.WinForms.Helpers;
+using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace EncryptationDavidRivas.WinForms
 {
     public partial class Start : Form
     {
-        private readonly IUserService _userService;
+        private readonly IEncryptionDecryptionService _service;
+        private readonly List<Control> _controls;
 
-        public Start(IUserService userService)
+        public Start(IEncryptionDecryptionService service)
         {
             InitializeComponent();
-            _userService = userService;
+            _service = service;
+            _controls = new List<Control>() { txtUserName, txtPassword, btnEncrypt };
+        }
 
-            var user = _userService.GetByUserNameAndPassword("davr", "2112");
+        private void BtnEncrypt_Click(object sender, EventArgs e)
+        {
+            string userName = txtUserName.Text,
+                password = txtPassword.Text;
 
-            _userService.NewUser = new UserModel("davr", "David", "Rivas", "2112");
-            _userService.Insert();
+            if (string.IsNullOrWhiteSpace(userName) || string.IsNullOrWhiteSpace(password))
+            {
+                MessageBox.Show("Type both fields", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
-            var users = _userService.GetAll().ToList();
+            try
+            {
+                UseWaitCursor = true;
+                ToggleControls();
+
+                var encryptDecrypt = _service.EncryptAndDecrypt(userName, password);
+                txtAES.Text = encryptDecrypt.EncryptedUserName;
+                txtRSA.Text = encryptDecrypt.EncryptedPassword;
+
+                ToggleControls();
+                UseWaitCursor = false;
+            }
+            catch (Exception ex)
+            {
+                ExceptionHandlerHelper.ExceptionHandler(ex);
+            }
+        }
+
+        private void ToggleControls()
+        {
+            _controls.ForEach(x => x.Enabled = !x.Enabled);
         }
     }
 }
