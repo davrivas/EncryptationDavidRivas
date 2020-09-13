@@ -222,29 +222,6 @@
   <data name="pnlMain.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
-  </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>333, 244</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 60</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>David Santiago Rivas Agudelo
-Criptografía Grupo 042
-Docente: Luis Francisco López Urrea</value>
-  </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
   </data>
@@ -256,15 +233,6 @@ Docente: Luis Francisco López Urrea</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="picAreandina.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 244</value>
-  </data>
-  <data name="picAreandina.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 108</value>
-  </data>
-  <data name="picAreandina.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
   </data>
   <data name="&gt;&gt;picAreandina.Name" xml:space="preserve">
     <value>picAreandina</value>
@@ -278,21 +246,6 @@ Docente: Luis Francisco López Urrea</value>
   <data name="&gt;&gt;picAreandina.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="txtRSA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="txtRSA.Location" type="System.Drawing.Point, System.Drawing">
-    <value>67, 124</value>
-  </data>
-  <data name="txtRSA.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtRSA.Size" type="System.Drawing.Size, System.Drawing">
-    <value>633, 114</value>
-  </data>
-  <data name="txtRSA.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
   <data name="&gt;&gt;txtRSA.Name" xml:space="preserve">
     <value>txtRSA</value>
   </data>
@@ -305,21 +258,6 @@ Docente: Luis Francisco López Urrea</value>
   <data name="&gt;&gt;txtRSA.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="txtAES.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="txtAES.Location" type="System.Drawing.Point, System.Drawing">
-    <value>67, 4</value>
-  </data>
-  <data name="txtAES.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtAES.Size" type="System.Drawing.Size, System.Drawing">
-    <value>633, 114</value>
-  </data>
-  <data name="txtAES.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
   <data name="&gt;&gt;txtAES.Name" xml:space="preserve">
     <value>txtAES</value>
   </data>
@@ -331,6 +269,51 @@ Docente: Luis Francisco López Urrea</value>
   </data>
   <data name="&gt;&gt;txtAES.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblRSA.Name" xml:space="preserve">
+    <value>lblRSA</value>
+  </data>
+  <data name="&gt;&gt;lblRSA.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblRSA.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;lblRSA.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblAES.Name" xml:space="preserve">
+    <value>lblAES</value>
+  </data>
+  <data name="&gt;&gt;lblAES.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblAES.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;lblAES.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pnlMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 40</value>
+  </data>
+  <data name="pnlMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>705, 363</value>
+  </data>
+  <data name="pnlMain.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.Name" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlMain.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="lblRSA.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -395,27 +378,6 @@ Docente: Luis Francisco López Urrea</value>
   <data name="&gt;&gt;lblAES.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="pnlMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 40</value>
-  </data>
-  <data name="pnlMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>705, 363</value>
-  </data>
-  <data name="pnlMain.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;pnlMain.Name" xml:space="preserve">
-    <value>pnlMain</value>
-  </data>
-  <data name="&gt;&gt;pnlMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlMain.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pnlMain.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="btnEncrypt.Location" type="System.Drawing.Point, System.Drawing">
     <value>351, 12</value>
   </data>
@@ -440,6 +402,116 @@ Docente: Luis Francisco López Urrea</value>
   <data name="&gt;&gt;btnEncrypt.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="txtAES.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtAES.Location" type="System.Drawing.Point, System.Drawing">
+    <value>67, 4</value>
+  </data>
+  <data name="txtAES.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtAES.Size" type="System.Drawing.Size, System.Drawing">
+    <value>633, 114</value>
+  </data>
+  <data name="txtAES.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txtAES.Name" xml:space="preserve">
+    <value>txtAES</value>
+  </data>
+  <data name="&gt;&gt;txtAES.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtAES.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;txtAES.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txtRSA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txtRSA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>67, 124</value>
+  </data>
+  <data name="txtRSA.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="txtRSA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>633, 114</value>
+  </data>
+  <data name="txtRSA.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txtRSA.Name" xml:space="preserve">
+    <value>txtRSA</value>
+  </data>
+  <data name="&gt;&gt;txtRSA.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtRSA.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;txtRSA.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="picAreandina.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 244</value>
+  </data>
+  <data name="picAreandina.Size" type="System.Drawing.Size, System.Drawing">
+    <value>318, 108</value>
+  </data>
+  <data name="picAreandina.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;picAreandina.Name" xml:space="preserve">
+    <value>picAreandina</value>
+  </data>
+  <data name="&gt;&gt;picAreandina.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;picAreandina.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;picAreandina.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 244</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>307, 60</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>David Santiago Rivas Agudelo
+Criptografía Grupo 042
+Docente: Luis Francisco López Urrea</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>pnlMain</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -448,6 +520,12 @@ Docente: Luis Francisco López Urrea</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>733, 415</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>749, 454</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>749, 454</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

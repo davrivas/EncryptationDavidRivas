@@ -15,7 +15,7 @@ namespace EncryptationDavidRivas.WinForms
         {
             InitializeComponent();
             _service = service;
-            _controls = new List<Control>() { txtUserName, txtPassword, btnEncrypt };
+            _controls = new List<Control>() { txtUserName, txtPassword, btnEncrypt, txtAES, txtRSA };
         }
 
         private void BtnEncrypt_Click(object sender, EventArgs e)
@@ -31,7 +31,7 @@ namespace EncryptationDavidRivas.WinForms
 
             try
             {
-                UseWaitCursor = true;
+                Cursor.Current = Cursors.WaitCursor;
                 ToggleControls();
 
                 var encryptDecrypt = _service.EncryptAndDecrypt(userName, password);
@@ -39,7 +39,7 @@ namespace EncryptationDavidRivas.WinForms
                 txtRSA.Text = encryptDecrypt.EncryptedPassword;
 
                 ToggleControls();
-                UseWaitCursor = false;
+                Cursor.Current = Cursors.Default;
             }
             catch (Exception ex)
             {
