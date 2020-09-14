@@ -59,7 +59,6 @@
     <Compile Include="Services\EncryptionService.cs" />
     <Compile Include="Services\EncryptionDecryptionService.cs" />
     <Compile Include="Model\EncryptionDecryptionModel.cs" />
-    <Compile Include="Util\DateTimeUtils.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
