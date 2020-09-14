@@ -17,13 +17,11 @@ namespace EncryptationDavidRivas.WinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Boostrap();
+            Boostrap(); // inject dependencies
             Application.Run(Container.GetInstance<Start>());
         }
 
-        /// <summary>
-        /// Taken from https://simpleinjector.readthedocs.io/en/latest/windowsformsintegration.html
-        /// </summary>
+        // Taken from https://simpleinjector.readthedocs.io/en/latest/windowsformsintegration.html
         static void Boostrap()
         {
             // Create the container as usual.

@@ -9,9 +9,9 @@ namespace EncryptationDavidRivas.BL.Services
         byte[] AsymmetricDecryption(byte[] Data, RSAParameters RSAKey, bool DoOAEPPadding);
     }
 
-    /// Taken from https://www.c-sharpcorner.com/article/aes-encryption-in-c-sharp/ and https://www.c-sharpcorner.com/UploadFile/75a48f/rsa-algorithm-with-C-Sharp2/
     public class DecryptionService : IDecryptionService
     {
+        // Taken from https://www.c-sharpcorner.com/article/aes-encryption-in-c-sharp/
         public string SymmetricDecryption(byte[] cipherText, byte[] Key, byte[] IV)
         {
             string plaintext = null;
@@ -37,6 +37,7 @@ namespace EncryptationDavidRivas.BL.Services
             return plaintext;
         }
 
+        // Taken from https://www.c-sharpcorner.com/UploadFile/75a48f/rsa-algorithm-with-C-Sharp2/
         public byte[] AsymmetricDecryption(byte[] Data, RSAParameters RSAKey, bool DoOAEPPadding)
         {
             byte[] decryptedData;
